@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: linux date
-      run: echo "$(date +"%d-%m-%y)"
+      run: echo "builddate=$(date +'%Y-%m-%d')"
 
   job2:
     name: second job
@@ -22,7 +22,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - name: mac date
-      run: echo "$(date +"%d-%m-%y)"
+      run: echo "builddate=$(date +'%Y-%m-%d')"
 
   job4:
     needs: [job1, job2, job3]
