@@ -8,21 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: linux date
-      run: echo date +"%d-%m-%y"
+      run: echo "$(date +"%d-%m-%y)"
 
   job2:
     name: second job
     runs-on: windows-latest
     steps:
     - name: windows date
-      run: Get-Date -Format "MM/DD/YY"
+      run: Get-Date -Format "MM/dd/yyyy"
 
   job3:
     name: third job
     runs-on: macos-latest
     steps:
     - name: mac date
-      run: echo date +"%d-%m-%y"
+      run: echo "$(date +"%d-%m-%y)"
 
   job4:
     needs: [job1, job2, job3]
