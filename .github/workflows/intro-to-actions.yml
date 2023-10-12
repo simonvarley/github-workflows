@@ -1,0 +1,34 @@
+name: 4 jobs
+
+on: push
+
+jobs:
+  job1:
+    name: first job
+    runs-on: ubuntu-latest
+    steps:
+    - name: linux date
+      run: echo $NOW
+
+  job2:
+    name: second job
+    runs-on: windows-latest
+    steps:
+    - name: windows date
+      run: Get-Date -Format "MM/DD/YY"
+
+  job3:
+    name: third job
+    runs-on: macos-latest
+    steps:
+    - name: mac date
+      run: echo $NOW
+
+  job4:
+    needs: [job1, job2, job3]
+    runs-on: ubuntu-latest
+    steps:
+    - name: last step
+      run: echo all done!
+      
+    
