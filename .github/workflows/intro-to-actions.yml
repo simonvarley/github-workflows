@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: windows date
-      run: echo Get-Date -Format "MM/DD/YY"
+      run: Get-Date -Format "MM/DD/YY"
 
   job3:
     name: third job
