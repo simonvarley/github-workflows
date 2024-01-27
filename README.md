@@ -1,4 +1,3 @@
 # github-demo
-A simple demo repository to show basic Git workflow.
+A simple  repository to learn Git workflows.
 
-This is a very short bio.
